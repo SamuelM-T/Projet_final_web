@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projet Final</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+<!--source: bootstrap/mon projet incomplet-->
+<div class="modal fade" id="modalErreur" tabindex="-1" role="dialog" aria-labelledby="modalErreurLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalErreurLabel">Erreur</h5>
+            </div>
+            <div class="modal-body" id="modalErreurBody">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" id="closeModal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <h1>Répertoire de recettes communautaires</h1>
+    <main class="container row row-cols-2">
+        <form id="form" class="col" onsubmit="event.preventDefault()">
+            <h2>Ajouter une recette</h2>
+
+            <div class="mb-3">
+                <label for="nom" class="form-label">Nom de la recette</label>
+                <input type="text" class="form-control" name="nom" id="nom">
+            </div>
+
+            <label class="form-label">Ingrédients</label>
+            <div class="container mb-3">
+                <div class="row row-cols-2">
+                    <div class="col">
+                        <label for="ingredient1" class="form-label">Ingrédient 1</label>
+                        <input type="text" class="form-control col" name="ingredient1" id="ingredient1">
+                    </div>
+                    <div class="col">
+                        <label for="quantite1" class="form-label">Quantité 1</label>
+                        <input type="text" class="form-control col" name="quantite1" id="quantite1">
+                    </div>
+                    <div class="col">
+                        <label for="ingredient2" class="form-label">Ingrédient 2</label>
+                        <input type="text" class="form-control col" name="ingredient2" id="ingredient2">
+                    </div>
+                    <div class="col">
+                        <label for="quantite2" class="form-label">Quantité 2</label>
+                        <input type="text" class="form-control col" name="quantite2" id="quantite2">
+                    </div>
+                    <div class="col">
+                        <label for="ingredient3" class="form-label">Ingrédient 3</label>
+                        <input type="text" class="form-control col" name="ingredient2" id="ingredient3">
+                    </div>
+                    <div class="col">
+                        <label for="quantite3" class="form-label">Quantité 3</label>
+                        <input type="text" class="form-control col" name="quantite2" id="quantite3">
+                    </div>
+                    <div class="col">
+                        <label for="ingredient4" class="form-label">Ingrédient 4</label>
+                        <input type="text" class="form-control col" name="ingredient2" id="ingredient4">
+                    </div>
+                    <div class="col">
+                        <label for="quantite4" class="form-label">Quantité 4</label>
+                        <input type="text" class="form-control col" name="quantite4" id="quantite4">
+                    </div>
+                    <div class="col">
+                        <label for="ingredient5" class="form-label">Ingrédient 5</label>
+                        <input type="text" class="form-control col" name="ingredient5" id="ingredient5">
+                    </div>
+                    <div class="col">
+                        <label for="quantite5" class="form-label">Quantité 5</label>
+                        <input type="text" class="form-control col" name="quantite5" id="quantite5">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="instructions" class="form-label">Instructions</label>
+                    <input type="text" class="p-5 form-control" id="instructions" name="instructions">
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary" id="ajouer">Ajouter la recette</button>
+                </div>
+            </div>
+        </form>
+
+        <div>
+            <h2>Recettes</h2>
+
+            <!--Modèle de container recette-->
+            <div id="list_recettes">
+
+            </div>
+            <div class="container border border-secondary-subtle mb-4" id="rec0">
+                <h3 class="mb-3" id="rec0_nomrec">Nom de recette 1</h3>
+                <ul id="rec0_ings">Ingrédients :
+                    <li class="mb-3" id="rec0_ing1">Ingrédient 1</li>
+                    <li class="mb-3" id="rec0_ing2">Ingrédient 2</li>
+                    <li class="mb-3" id="rec0_ing3">Ingrédient 3</li>
+                </ul>
+                <p class="mb-3" id="rec0_instr">Instructions: lalala</p>
+                <button type="button" class="btn btn-danger" id="rec0_supp">Supprimer</button>
+            </div>
+
+
+
+        </div>
+
+    </main>
+</body>
+</html>
